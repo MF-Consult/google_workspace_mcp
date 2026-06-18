@@ -23,7 +23,7 @@
       "WORKSPACE_MCP_BASE_URI": "https://mf-drive-mcp.fastmcp.app",
       "GOOGLE_OAUTH_REDIRECT_URI": "https://mf-drive-mcp.fastmcp.app/oauth2callback",
       "WORKSPACE_MCP_ALLOWED_CLIENT_REDIRECT_URIS": "https://claude.ai/api/mcp/auth_callback,https://claude.com/api/mcp/auth_callback",
-      "GOOGLE_OAUTH_CLIENT_ID": "din-client-id.apps.googleusercontent.com"
+      "GOOGLE_OAUTH_CLIENT_ID": "370202132680-p748to91vfr34ahfhgfg1sfof5kg3kvt.apps.googleusercontent.com"
     }
   }
 }
