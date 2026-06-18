@@ -178,8 +178,14 @@ set_enabled_tool_names(None)  # Don't filter individual tools - enable all
 # Filter tools based on configuration
 filter_server_tools(server)
 
-# Configure authentication after scopes are known
-configure_server_for_http()
+# Configure authentication after scopes are known.
+# Skip on platforms (e.g. Horizon) that don't provide an OAuth client ID.
+if os.environ.get("GOOGLE_OAUTH_CLIENT_ID"):
+    configure_server_for_http()
+else:
+    logger.info(
+        "Skipping HTTP/OAuth configuration (GOOGLE_OAUTH_CLIENT_ID not set)"
+    )
 
 # Export server instance for FastMCP CLI (looks for 'mcp', 'server', or 'app')
 mcp = server
